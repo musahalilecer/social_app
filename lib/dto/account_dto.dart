@@ -1,9 +1,9 @@
-class Account {
+class AccountDto {
   final String id;
   final String username;
   final String password;
 
-  Account({
+  AccountDto({
     required this.id,
     required this.username,
     required this.password,
@@ -16,12 +16,13 @@ class Account {
       'password': password,
     };
   }
-
-  factory Account.fromJson(Map<String, dynamic> json) {
-    return Account(
+  
+  factory AccountDto.fromJson(Map<String, dynamic> json) {
+    return AccountDto(
       id: json['id'],
       username: json['username'],
       password: json['password'],
     );
   }
 }
+

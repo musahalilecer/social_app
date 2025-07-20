@@ -1,14 +1,14 @@
-import 'package:social_app/model/Comment.dart';
+import 'package:social_app/dto/comment_dto.dart';
 
-class Post {
+class PostDto {
   final String id;
   final String userId;
   final String image;
   final String description;
-  final Comment comment;
+  final CommentDto comment;
   final DateTime timestamp;
 
-  Post({
+  PostDto({
     required this.id,
     required this.userId,
     required this.image,
@@ -27,15 +27,24 @@ class Post {
       'timestamp': timestamp.toIso8601String(),
     };
   }
-  
-  factory Post.fromJson(Map<String, dynamic> json) {
-    return Post(
+
+  factory PostDto.fromJson(Map<String, dynamic> json) {
+    return PostDto(
       id: json['id'],
       userId: json['userId'],
       image: json['image'],
       description: json['description'],
-      comment: Comment.fromJson(json['comment']),
+      comment: CommentDto.fromJson(json['comment']),
       timestamp: DateTime.parse(json['timestamp']),
     );
-  }
+  } 
 }
+
+/*
+  final String id;
+  final String userId;
+  final String image;
+  final String description;
+  final Comment comment;
+  final DateTime timestamp;
+*/
