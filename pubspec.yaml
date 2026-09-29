@@ -30,24 +30,54 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # State Management (Modern Riverpod & Provider)
+  flutter_riverpod: ^2.4.8
+  riverpod_annotation: ^2.3.3
+  provider: ^6.1.1
+  
+  # Firebase Suite
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.14.0
+  cloud_firestore: ^4.13.0
+  firebase_storage: ^11.5.0
+  
+  # Navigation (Declarative Routing)
+  go_router: ^13.0.0
+  
+  # Media Handling
+  video_player: ^2.8.1
+  chewie: ^1.7.0
+  image_picker: ^1.0.4
+  cached_network_image: ^3.3.0
+  
+  # Storage & Security
+  flutter_secure_storage: ^9.0.0
+  
+  # Utility
+  path: ^1.9.0
   sqflite: ^2.3.0
-  path: ^1.8.0
-
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  
+  # JSON & Models
+  json_annotation: ^4.8.1
+  freezed_annotation: ^2.4.1
+  
+  # UI
   cupertino_icons: ^1.0.8
+  
+  # Override transitive dependency to fix build
+  package_info_plus: ^8.1.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
   flutter_lints: ^4.0.0
+  
+  # Code Generation
+  riverpod_generator: ^2.3.3
+  json_serializable: ^6.7.1
+  freezed: ^2.4.2
+  build_runner: ^2.4.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
